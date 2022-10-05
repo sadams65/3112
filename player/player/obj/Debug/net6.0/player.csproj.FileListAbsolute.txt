@@ -1,0 +1,15 @@
+C:\Users\seth\Desktop\3112\player\player\bin\Debug\net6.0\player.exe
+C:\Users\seth\Desktop\3112\player\player\bin\Debug\net6.0\player.deps.json
+C:\Users\seth\Desktop\3112\player\player\bin\Debug\net6.0\player.runtimeconfig.json
+C:\Users\seth\Desktop\3112\player\player\bin\Debug\net6.0\player.dll
+C:\Users\seth\Desktop\3112\player\player\bin\Debug\net6.0\player.pdb
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.csproj.AssemblyReference.cache
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.AssemblyInfoInputs.cache
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.AssemblyInfo.cs
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.csproj.CoreCompileInputs.cache
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.dll
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\refint\player.dll
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.pdb
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\player.genruntimeconfig.cache
+C:\Users\seth\Desktop\3112\player\player\obj\Debug\net6.0\ref\player.dll
