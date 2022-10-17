@@ -17,6 +17,11 @@ namespace HelloWorld
                 plyrName[i] = Console.ReadLine();
                 Console.WriteLine("Enter the player number 1 - 99: ");
                 number[i] = int.Parse(Console.ReadLine());
+                if (number[i] > 99 || number[i]<0)
+                {
+                    Console.WriteLine("Outside of the boundry! Please enter a valid number within 1 - 99: ");
+                    number[i] = int.Parse(Console.ReadLine());
+                }
             }
 
             for (int j = 0; j < plyrName.Length; j++)
