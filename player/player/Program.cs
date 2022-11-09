@@ -17,12 +17,24 @@ namespace HelloWorld
                 {
                     Console.WriteLine("Enter the player name: ");
                     plyrName[i] = Console.ReadLine();
+                }
+
+                catch
+                {
+                    result = false;
+                }
+                
+                try
+                {
+                    // if number is less than 1 or greater than 0, sent error
                     Console.WriteLine("Enter the player number 1 - 99: ");
                     number[i] = Convert.ToInt32(Console.ReadLine());
                 }
-                catch
+                catch 
                 {
                     Console.WriteLine("Error!");
+                    Console.WriteLine("Enter the player number 1 - 99: ");
+                    number[i] = Convert.ToInt32(Console.ReadLine());
                 }
             }
 
