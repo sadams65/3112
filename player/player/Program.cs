@@ -10,6 +10,8 @@ namespace HelloWorld
             int[] number = new int[11];
             String[] pos = new String[11];
             bool result;
+            int max = 100;
+            int min = 0;
 
             for (int i = 0; i < plyrName.Length; i++)
             {
@@ -29,6 +31,12 @@ namespace HelloWorld
                     // if number is less than 1 or greater than 0, sent error
                     Console.WriteLine("Enter the player number 1 - 99: ");
                     number[i] = Convert.ToInt32(Console.ReadLine());
+                    if (number[i]>max || number[i]==min)
+                    {
+                        Console.WriteLine("Error!");
+                        Console.WriteLine("Enter the player number 1 - 99: ");
+                        number[i] = Convert.ToInt32(Console.ReadLine());
+                    }
                 }
                 catch 
                 {
