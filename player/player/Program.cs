@@ -1,57 +1,84 @@
 ﻿using System;
 namespace HelloWorld
 {
+
+    public class Team
+    {
+        public Team(string name, int teamSize)
+        {
+            Name = name;
+            TeamSize = teamSize;
+            Players = new Player[teamSize];
+        }
+
+
+
+        public string Name { get; set; }
+        public int TeamSize { get; set; }
+        public Player[] Players { get; set; }
+    }
+
+
+
+    public class Player
+    {
+        public Player(string name, int number, string position)
+        {
+            Name = name;
+            Number = number;
+            Position = position;
+        }
+
+
+
+        public string Name { get; }
+        public int Number { get; set; }
+        public string Position { get; set; }
+    }
+
+
+
+    public class DoIt
+    {
+        public DoIt()
+        {
+            //Inside a constructor u do not write code that does logic
+            Console.Write("Please enter the team name: ");
+            string teamName = Console.ReadLine();
+            Team t = new Team(teamName, 2);
+
+
+
+            //Loading the array with data
+            for (int i = 0; i < t.Players.Length; i++)
+            {
+                Console.Write("Please enter a name: ");
+                string name = Console.ReadLine();
+                Console.Write("Please enter a number: ");
+                string num = Console.ReadLine();
+                Console.Write("Please enter a position: ");
+                string position = Console.ReadLine();
+                t.Players[i] = new Player(name, int.Parse(num), position);
+            }
+
+
+
+            for (int i = 0; i < t.Players.Length; i++)
+            {
+                Console.WriteLine("Name -- " + t.Players[i].Name + " -- Number -- " + t.Players[i].Number);
+                Console.WriteLine("Position -- " + t.Players[i].Position + "\n");
+            }
+
+
+
+
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            String[] plyrName = new String[11]; // only 11 since that is how many are in a starting lineup
-            int[] number = new int[11];
-            String[] pos = new String[11];
-            bool result;
-            int max = 100;
-            int min = 0;
-
-            for (int i = 0; i < plyrName.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine("Enter the player name: ");
-                    plyrName[i] = Console.ReadLine();
-                }
-
-                catch
-                {
-                    result = false;
-                }
-                
-                try
-                {
-                    // if number is less than 1 or greater than 0, sent error
-                    Console.WriteLine("Enter the player number 1 - 99: ");
-                    number[i] = Convert.ToInt32(Console.ReadLine());
-                    while (number[i]>max || number[i]==min)
-                    {
-                        Console.WriteLine("Error!");
-                        Console.WriteLine("Enter the player number 1 - 99: ");
-                        number[i] = Convert.ToInt32(Console.ReadLine());
-                    }
-                }
-                catch 
-                {
-                    Console.WriteLine("Error!");
-                    Console.WriteLine("Enter the player number 1 - 99: ");
-                    number[i] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
-
-            
-
-            for (int j = 0; j < plyrName.Length; j++)
-            {
-                Console.WriteLine("");
-            }
-
+            DoIt doit = new DoIt();
         }
     }
 }
