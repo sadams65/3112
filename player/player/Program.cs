@@ -7,6 +7,7 @@ namespace HelloWorld
         public Team(string name, int teamSize)
         {
             Name = name;
+            
             TeamSize = teamSize;
             Players = new Player[teamSize];
         }
@@ -14,6 +15,7 @@ namespace HelloWorld
 
 
         public string Name { get; set; }
+        
         public int TeamSize { get; set; }
         public Player[] Players { get; set; }
     }
@@ -36,17 +38,27 @@ namespace HelloWorld
         public string Position { get; set; }
     }
 
-
+    
 
     public class DoIt
     {
         public DoIt()
         {
+            string sizeInput;
+            int teamSize;
+            string plyrNum;
+            int number;
+            string position;
+            
             //Inside a constructor u do not write code that does logic
             Console.Write("Please enter the team name: ");
             string teamName = Console.ReadLine();
-            Console.Write("Enter the amount of players you would like to enter: ");
-            int teamSize = int.Parse(Console.ReadLine());
+            do
+            {
+                Console.Write("Please enter the amount of players: ");
+                sizeInput = Console.ReadLine();
+            } while (!int.TryParse(sizeInput, out teamSize));    
+
             Team t = new Team(teamName, teamSize);
 
 
@@ -56,11 +68,22 @@ namespace HelloWorld
             {
                 Console.Write("Please enter a name: ");
                 string name = Console.ReadLine();
-                Console.Write("Please enter a number: ");
-                string num = Console.ReadLine();
+                do
+                {
+                    Console.Write("Please enter a number: ");
+                    plyrNum = Console.ReadLine();
+                } while (!int.TryParse(plyrNum, out number));
+                
                 Console.Write("Please enter a position: ");
-                string position = Console.ReadLine();
-                t.Players[i] = new Player(name, int.Parse(num), position);
+                position = Console.ReadLine();
+
+
+
+               
+
+
+
+                t.Players[i] = new Player(name, number, position);
             }
 
 
