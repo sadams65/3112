@@ -45,7 +45,9 @@ namespace HelloWorld
             //Inside a constructor u do not write code that does logic
             Console.Write("Please enter the team name: ");
             string teamName = Console.ReadLine();
-            Team t = new Team(teamName, 2);
+            Console.Write("Enter the amount of players you would like to enter: ");
+            int teamSize = int.Parse(Console.ReadLine());
+            Team t = new Team(teamName, teamSize);
 
 
 
